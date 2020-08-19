@@ -14,7 +14,13 @@ namespace HelloWorld
             Console.WriteLine("Hello, who's there?");
             string name = Console.ReadLine();
             Console.WriteLine("what is it that you want " + name + "?");
-            Console.ReadLine();
+            if(input == '1')
+            {
+                i am looking for a man by the name of Merlin;
+            }
+            {if(input == '2')
+                    i am looking for shelter;
+            }
             Console.WriteLine("how is it that you found me " + name + "?");
             Console.ReadLine();
             Console.WriteLine("i see so they've sent some child to bring me in?");
