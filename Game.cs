@@ -8,18 +8,22 @@ namespace HelloWorld
     {
         public void Run()
         {
-            Console.WriteLine("you've been sent out to find a powerful mage to help in the efforts of curing to queen who has been cursed by an evil wizard.");
+            Console.WriteLine("you've been sent out to find a powerful mage to help in the efforts of curing the queen who has been cursed by an evil wizard.");
             Console.WriteLine("King Dannahiem has given you the location as to where Merlin has been hiding. The king has given you an order to bring Merlin back by any means necessary.");
-            Console.WriteLine("during your travels, you come across a cave for shelter. once you enter you're met by a hermit of a man.");
-            Console.WriteLine("Hello, who's there?");
+            Console.WriteLine("during your travels, you come across a cave for shelter. once you enter you're met by a hermit, who has fallen. you help him to his feet");
+            Console.WriteLine("Thank you my good boy! my name is merlin, what is yours?");
             string name = Console.ReadLine();
-            Console.WriteLine("what is it that you want " + name + "?");
+            Console.WriteLine("what is it that you seek " + name + "?");
+            Console.WriteLine("1.merlin");
+            Console.WriteLine("2.a battle");
+            char input = Console.ReadKey().KeyChar;
             if(input == '1')
             {
-                i am looking for a man by the name of Merlin;
+                Console.WriteLine(" well you're in luck you've found me");
             }
-            {if(input == '2')
-                    i am looking for shelter;
+            else if(input == '2')
+            {
+                Console.WriteLine(" oh a battle is what you want huh?");
             }
             Console.WriteLine("how is it that you found me " + name + "?");
             Console.ReadLine();
