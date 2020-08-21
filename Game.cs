@@ -33,11 +33,11 @@ namespace HelloWorld
             char discussion = Console.ReadKey().KeyChar;
             if(input == '1')
             {
-                Console.WriteLine(" well you're in luck you've found me");
+                Console.WriteLine(" well you're in luck you've found me my good boy!");
             }
             else if(input == '2')
             {
-                Console.WriteLine(" oh a battle is what you want huh?");
+                Console.WriteLine(" oh a battle is what you want huh?well you won't get one from me haha!");
             }
             
             Console.WriteLine("how is it that you found me " + name + "?");
@@ -129,8 +129,8 @@ namespace HelloWorld
             {
                 Console.WriteLine("yes my good sir!");
             }
-
-            Console.WriteLine("as merlin and" + name + "walks away the seemingly easy going merchant transforms into the evil wizard");
+            
+            Console.WriteLine("as merlin and " + name + "walks away the seemingly easy going merchant transforms into the evil wizard");
 
             Console.WriteLine("hahaha fools they'll try and lift the curse, but only fail and kill the queen! hahaha");
             //this variable is used to store health
