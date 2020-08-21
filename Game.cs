@@ -130,7 +130,7 @@ namespace HelloWorld
                 Console.WriteLine("yes my good sir!");
             }
 
-            Console.WriteLine("as + name + walk away the seemingly easy going merchant transforms into the evil wizard");
+            Console.WriteLine("as merlin and" + name + "walks away the seemingly easy going merchant transforms into the evil wizard");
 
             Console.WriteLine("hahaha fools they'll try and lift the curse, but only fail and kill the queen! hahaha");
             //this variable is used to store health
