@@ -37,7 +37,12 @@ namespace HelloWorld
             }
             else if(input == '2')
             {
-                Console.WriteLine(" oh a battle is what you want huh?well you won't get one from me haha!");
+                Console.WriteLine(" oh a battle is what you want huh? well you won't get one from me haha!");
+            }
+            else
+            {
+                Console.Clear();
+                Console.WriteLine("invalid input");
             }
             
             Console.WriteLine("how is it that you found me " + name + "?");
@@ -54,6 +59,7 @@ namespace HelloWorld
             }
             else 
             {
+                Console.Clear();
                 Console.WriteLine("invalid input");
             }
             
@@ -62,7 +68,7 @@ namespace HelloWorld
             char convo = Console.ReadKey().KeyChar;
             if(input == '1')
             {
-                Console.WriteLine("certainlly my boy, ill do what i can to help!");
+                Console.WriteLine("certainlly my boy, I'll do what I can to help!");
             }
             else if(input == '2')
             {
@@ -70,6 +76,7 @@ namespace HelloWorld
             }
             else
             {
+                Console.Clear();
                 Console.WriteLine("invalid input");
             }
             Console.WriteLine("Please, allow me to heal you before you bring me back to the kingdom.");
@@ -86,6 +93,7 @@ namespace HelloWorld
             }
             else
             {
+                Console.Clear();
                 Console.WriteLine("invalid input");
             }
             Console.WriteLine("so what are you exactly? you're not like anything ive ever seen before!");
@@ -112,11 +120,12 @@ namespace HelloWorld
                 }
                 else
                 {
+                    Console.Clear();
                     Console.Write("invalid input");
                 }
             }
 
-            Console.WriteLine("+ name + and merlin, are returning to Dannahiem to try and lift the curse placed by the evil wizard. when you're stopped by a merchant.");
+            Console.WriteLine("merlin and" + name + ", are returning to Dannahiem to try and lift the curse placed by the evil wizard. when you're stopped by a merchant.");
             Console.WriteLine("well hello there my good friends! can i interest you in some antiqueties?");
             Console.WriteLine("1.we haven't the time you pesant! no move!");
             Console.WriteLine("2.move or ill move you myself worm!");
@@ -129,8 +138,8 @@ namespace HelloWorld
             {
                 Console.WriteLine("yes my good sir!");
             }
-            
-            Console.WriteLine("as merlin and " + name + "walks away the seemingly easy going merchant transforms into the evil wizard");
+
+            Console.WriteLine("as merlin and" + name + "walks away the seemingly easy going merchant transforms into the evil wizard");
 
             Console.WriteLine("hahaha fools they'll try and lift the curse, but only fail and kill the queen! hahaha");
             //this variable is used to store health
