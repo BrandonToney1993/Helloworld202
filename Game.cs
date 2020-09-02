@@ -6,8 +6,12 @@ namespace HelloWorld
 {
     class Game
     {
+        //end the game when true
+        private bool _gameover = false;
+        
         public void Run()
         {
+
             Console.WriteLine("you've been sent out to find a powerful mage to help in the efforts of curing the queen who has been cursed by an evil wizard.");
 
             Console.WriteLine("King Dannahiem has given you the location as to where Merlin has been hiding. The king has given you an order to bring Merlin back by any means necessary.");
