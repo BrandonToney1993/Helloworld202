@@ -4,20 +4,28 @@ namespace HelloWorld
 {
     class Game
     {
-<<<<<<< HEAD
-        //end the game when true
         private bool _gameover = false;
+
+
+        class Player(string nameVal, int healthVal, int damageVal)
+        {
+            float PlayerHealth = 100.0f;
+        float healthregen = 80.0f;
+        float damage = 100.0f;
+        float magic = 100.0f;
+        float magicregen = 80.0f;
+        bool maxLevelReached = false;
+        int maxLevel = 100;
+        int level = 1;
+        bool Ready = true;
+        float MerlinHealth = 100.0f;
+        float Mana = 80.0f;
+        }
+    }
         
         public void Run()
         {
-
-=======
-
-
-        public void Run()
-        {
             string role = ("");
-            //ask player to choose a role
             Console.WriteLine("1.Warrior Role");
             Console.WriteLine("2.Wizard Role");
             char Input = Console.ReadKey().KeyChar;
@@ -39,32 +47,10 @@ namespace HelloWorld
                 Console.Write("invalid input");
             }
 
-            //this variable is used to store health
-            float PlayerHealth = 100.0f;
-            //this variable is used to heal the player
-            float healthregen = 80.0f;
-            //this variable is used to mesure player damage
-            float damage = 100.0f;
-            //this variable is used for player magic
-            float magic = 100.0f;
-            //this variable is used for player magic regen
-            float magicregen = 80.0f;
-            //represent players max level reached
-            bool maxLevelReached = false;
-            //represents players max level
-            int maxLevel = 100;
-            //represents players level
-            int level = 1;
-            bool Ready = true;
-            //this variable is used to store merlins health 
-            float MerlinHealth = 75.0f;
-            //this variable is used to merlins magic
-            float Mana = 80.0f;
-            //print players stats on screen
+           
             Console.WriteLine("Player Health:" + PlayerHealth );
             Console.WriteLine("Player Level:" + level );
             Console.WriteLine("Player Role:" + role );
->>>>>>> master
             Console.WriteLine("you've been sent out to find a powerful mage to help in the efforts of curing the queen who has been cursed by an evil wizard.");
 
             Console.WriteLine("King Dannahiem has given you the location as to where Merlin has been hiding. The king has given you an order to bring Merlin back by any means necessary.");
@@ -110,18 +96,14 @@ namespace HelloWorld
                 int merlinhealth = (75);
                 while (PlayerHealth > 100 && merlinhealth >75)
                 {
-                    //display stats for players and enemies
-                    //players stats
                     Console.WriteLine("Player Name:" + Name );
                     Console.WriteLine("Player Health:" + PlayerHealth );
                     Console.WriteLine("Player Level:" + level );
                     Console.WriteLine("Player Role:" + role ); 
-                    //merlin stats
                     Console.WriteLine("\nMerlin");
                     Console.WriteLine("Merlin Health: + MerlinHealth");
                     Console.WriteLine("Merlin Level: + level");
                     Console.WriteLine("Merlin Role: + Mage");
-                    //ask player for input
                     Console.WriteLine("press 1 for attack");
                     Console.WriteLine("press 2 for defend");
                     
@@ -141,7 +123,7 @@ namespace HelloWorld
             Console.Clear();
             Console.WriteLine("why is it that you came in search of me " + Name + "?");
             Console.WriteLine("1.the king has sent me to find you, the queen has been cursed!");
-            Console.WriteLine("2.it was a just a conincidence.");
+            Console.WriteLine("2.it was just a conincidence.");
             char dialog = Console.ReadKey().KeyChar;
             if(input == '1')
             {
@@ -210,9 +192,31 @@ namespace HelloWorld
 
             Console.WriteLine("hahaha fools they'll try and lift the curse, but only fail and kill the queen! hahaha");
 
+         public void Save()
+        {
 
-            
-            
+        }
+
+        public void Load()
+        {
+
+        }
+
+        public void StartBattle()
+        {
+
+        }
+
+        public void Update()
+        {
+
+        }
+
+        public void End()
+        {
+              
+        }
+
         }
     }
 }
