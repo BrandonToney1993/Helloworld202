@@ -13,11 +13,12 @@ namespace HelloWorld
             public int damage = 100;
             public float magic = 100.0f;
             public int level = 1;
+            public int Gold = 1;
 
             bool maxLevelReached = false;
             private int maxLevel = 100;
 
-        private Item[] _inventory;
+        public Item[] _inventory;
 
         public Player()
         {
@@ -47,6 +48,7 @@ namespace HelloWorld
         {
             //damage += Weapon.statBoost;
             _inventory[index] = item;
+            _inventory.Add(item);
         }
 
         public void EquipItem(int itemIndex)
