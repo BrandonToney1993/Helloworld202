@@ -6,10 +6,6 @@ namespace HelloWorld
 {
     class Shop
     {
-        struct Item
-        {
-
-        }
 
             private int _gold;
             private Item[] _inventory;

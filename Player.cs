@@ -25,7 +25,19 @@ namespace HelloWorld
 
         public Player(string nameVal, int healthVal, int damageVal)
         {
-
+            protected string _name;
+            public string Role;
+            public float PlayerHealth = 100.0f;
+            public float healthregen = 80.0f;
+            public float damage = 100.0f;
+            public float magic = 100.0f;
+            public float magicregen = 80.0f;
+            bool maxLevelReached = false;
+            public int maxLevel = 100;
+            public int level = 1;
+            bool Ready = true;
+            float MerlinHealth = 100.0f;
+            float Mana = 80.0f;
         }
 
         public Player(string nameVal, int healthVal, int damageVal, int inventorySize)
@@ -82,5 +94,11 @@ namespace HelloWorld
             }
             Console.WriteLine(_name + " took " + damageVal + " damage!!!");
         }
+        public void Save()
+        {
+
+        }
+
+
     }
 }
