@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Text;
 
 namespace HelloWorld
 {
@@ -10,16 +12,16 @@ namespace HelloWorld
         class Player(string nameVal, int healthVal, int damageVal)
         {
             float PlayerHealth = 100.0f;
-        float healthregen = 80.0f;
-        float damage = 100.0f;
-        float magic = 100.0f;
-        float magicregen = 80.0f;
-        bool maxLevelReached = false;
-        int maxLevel = 100;
-        int level = 1;
-        bool Ready = true;
-        float MerlinHealth = 100.0f;
-        float Mana = 80.0f;
+            float healthregen = 80.0f;
+            float damage = 100.0f;
+            float magic = 100.0f;
+            float magicregen = 80.0f;
+            bool maxLevelReached = false;
+            int maxLevel = 100;
+            int level = 1;
+            bool Ready = true;
+            float MerlinHealth = 100.0f;
+            float Mana = 80.0f;
         }
     }
         
@@ -93,7 +95,7 @@ namespace HelloWorld
                 Console.WriteLine("press any key to continue");
                 Console.ReadKey();
                 Console.Clear();
-                int merlinhealth = (75);
+                int merlinHealth = (75);
                 while (PlayerHealth > 100 && merlinhealth >75)
                 {
                     Console.WriteLine("Player Name:" + Name );
@@ -192,9 +194,13 @@ namespace HelloWorld
 
             Console.WriteLine("hahaha fools they'll try and lift the curse, but only fail and kill the queen! hahaha");
 
-         public void Save()
+        public void Save()
         {
-
+            StreamWriter writer = new StreamWriter("SaveData.txt");
+            _player1.Save(writer);
+            _player2.Save(writer);
+            writer.Close();
+        
         }
 
         public void Load()
@@ -214,9 +220,7 @@ namespace HelloWorld
 
         public void End()
         {
-              
-        }
-
+            
         }
     }
 }
