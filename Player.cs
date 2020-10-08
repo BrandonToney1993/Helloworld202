@@ -18,11 +18,11 @@ namespace HelloWorld
             bool maxLevelReached = false;
             private int maxLevel = 100;
 
-        public Item[] _inventory;
+        public List<Item> _inventory;
+
 
         public Player()
         {
-            _inventory = new Item[3];
             playerHealth = 100;
             damage = 10;
         }
@@ -36,7 +36,6 @@ namespace HelloWorld
         {
             playerHealth = healthVal;
             damage = damageVal;
-            _inventory = new Item[inventorySize];
         }
 
         public void EquipItem(Item Weapon)
@@ -44,10 +43,8 @@ namespace HelloWorld
 
         }
 
-        public void AddItemToInventory(Item item, int index)
+        public void AddItemToInventory(Item item)
         {
-            //damage += Weapon.statBoost;
-            _inventory[index] = item;
             _inventory.Add(item);
         }
 

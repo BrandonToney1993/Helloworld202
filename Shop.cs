@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
+
 namespace HelloWorld
 {
     class Shop
@@ -66,7 +67,7 @@ namespace HelloWorld
                 if (choice == "1")
                 {
                     //checks if there is anything to buy
-                    if (_ShopInventory.Length <= 0)
+                    if (Inventory.Count <= 0)
                     {
                         Console.Clear();
 
@@ -123,8 +124,8 @@ namespace HelloWorld
                     if (player.Gold >= Inventory[index].Value)
                     {
                         player.AddItemToInventory(Inventory[index]);
-                        player.Gold -= Inventory[index].Cost;
-                        Inventory.RemoveAt(Index);
+                        player.Gold -= Inventory[index].Value;
+                        Inventory.RemoveAt(index);
                     }
                     
                     }

@@ -13,6 +13,9 @@ namespace HelloWorld
 
         public void Run()
         {
+
+            
+
             Console.WriteLine("What is your name?");
             String Name = Console.ReadLine();
             Console.Clear();
@@ -35,6 +38,8 @@ namespace HelloWorld
                 Console.Write("invalid input");
             }
 
+            Shop shop = new Shop(1);
+            shop.RunShop(ref player1);
 
             Console.WriteLine("Player Health:" + player1.playerHealth);
             Console.WriteLine("Player Level:" + player1.level);
