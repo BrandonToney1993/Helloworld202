@@ -4,11 +4,12 @@ using System.Text;
 
 namespace HelloWorld
 {
-    class warrior : Player
+    class Warrior : Player
     {
-        warior(string nameVal)
-            name = nameVal;
-            playerhealth = 200.0f;
-
+        public Warrior(string nameVal)
+        {
+            _name = nameVal;
+            playerHealth = 200.0f;
+        }
     }
 }

@@ -22,15 +22,15 @@ namespace HelloWorld
                 _inventory = items;
             }
 
-            public bool Sell(Player player, int itemIndex, int playerIndex)
-            {
-                Item itemToBuy = _inventory[itemIndex];
-                if(Player.Buy(itemToBuy, playerIndex))
-                {
-                    _gold += itemToBuy.cost;
-                    return true;
-                }
-                return false;
-            }
+            //public bool Sell(Player player, int itemIndex, int playerIndex)
+            //{
+            //    Item itemToBuy = _inventory[itemIndex];
+            //    if(Player.Buy(itemToBuy, playerIndex))
+            //    {
+            //        _gold += itemToBuy.cost;
+            //        return true;
+            //    }
+            //    return false;
+            //}
     }
 }

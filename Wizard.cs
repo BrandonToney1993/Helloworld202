@@ -7,9 +7,9 @@ namespace HelloWorld
     class Wizard : Player
     {
         public Wizard(string nameVal)
-            name = nameVal;
-            PlayerHealth = 80.0f;
-            healthregen = 5.0f;
-
+        {
+            _name = nameVal;
+            playerHealth = 80.0f;
+        }
     }
 }
