@@ -14,7 +14,8 @@ namespace HelloWorld
             Damage = Damage;
             Name = name;
             Value = Value;
-            Item
+            
         }
+
     }
 }
