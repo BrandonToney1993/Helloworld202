@@ -53,6 +53,7 @@ namespace HelloWorld
         }
         public void RunShop(ref Player player)
         {
+            Shop shop = new Shop(1);
             string choice = "";
             //open shopping menu
             while (choice != "0")

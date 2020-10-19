@@ -38,33 +38,31 @@ namespace HelloWorld
                 Console.Write("invalid input");
             }
 
-            Shop shop = new Shop(1);
-            shop.RunShop(ref player1);
+                Console.WriteLine("Player Health:" + player1.playerHealth);
+                Console.WriteLine("Player Level:" + player1.level);
+                Console.WriteLine("Player Role:" + player1.role);
+                Console.WriteLine("you've been sent out to find a powerful mage to help in the efforts of curing the queen who has been cursed by an evil wizard.");
 
-            Console.WriteLine("Player Health:" + player1.playerHealth);
-            Console.WriteLine("Player Level:" + player1.level);
-            Console.WriteLine("Player Role:" + player1.role);
-            Console.WriteLine("you've been sent out to find a powerful mage to help in the efforts of curing the queen who has been cursed by an evil wizard.");
-
-            Console.WriteLine("King Dannahiem has given you the location as to where Merlin has been hiding. The king has given you an order to bring Merlin back by any means necessary.");
-            Console.WriteLine("press any key to continue");
-            Console.ReadKey();
-            Console.Clear();
-            Console.WriteLine("during your travels, you come across a cave for shelter. once you enter you're met by a hermit, who has fallen.");
-            Console.WriteLine("1.Help the hermit up.");
-            Console.WriteLine("2.keep walking you have more important things to worry about");
-            char input = Console.ReadKey().KeyChar;
-            if (input == '1')
-            {
-                Console.WriteLine("thank you my good boy! For helping me, i would like to return the favor by helping you in your travels!");
-            }
-            else if (input == '2')
-            {
-                Console.WriteLine("you try to walk away, but the cries from the old hermit make you return to help.");
-            }
-            Console.WriteLine("press any key to continue");
-            Console.ReadKey();
-            Console.Clear();
+                Console.WriteLine("King Dannahiem has given you the location as to where Merlin has been hiding. The king has given you an order to bring Merlin back by any means necessary.");
+                Console.WriteLine("press any key to continue");
+                Console.ReadKey();
+                Console.Clear();
+                Console.WriteLine("during your travels, you come across a cave for shelter. once you enter you're met by a hermit, who has fallen.");
+                Console.WriteLine("1.Help the hermit up.");
+                Console.WriteLine("2.keep walking you have more important things to worry about");
+                char input = Console.ReadKey().KeyChar;
+                if (input == '1')
+                {
+                    Console.WriteLine("thank you my good boy! For helping me, i would like to return the favor by helping you in your travels!");
+                }
+                else if (input == '2')
+                {
+                    Console.WriteLine("you try to walk away, but the cries from the old hermit make you return to help.");
+                }
+                Console.WriteLine("press any key to continue");
+                Console.ReadKey();
+                Console.Clear();
+            
 
             Console.WriteLine("what is it that you seek? " + Name + "?");
             Console.WriteLine("1.I seek merlin");
