@@ -12,8 +12,6 @@ namespace HelloWorld
         public Weapon(string name, int cost, int it)
         {
             Damage = Damage;
-
-            
         }
 
     }

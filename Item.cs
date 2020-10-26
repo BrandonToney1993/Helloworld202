@@ -17,8 +17,7 @@ namespace HelloWorld
         {
             Name = name;
             Value = cost;
-            ItemType = ItemType;
-           
+            ItemType = ItemType;   
         }
 
     }
