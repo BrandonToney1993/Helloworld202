@@ -9,16 +9,12 @@ namespace HelloWorld
     {
 
         public List<Item> Inventory = new List<Item>();
-        public int _gold;
+        public int _gold = 500;
         Item Sword = new Item("", 5, 0);
         Item Potion = new Item("", 5, 0);
 
         public Item[] _inventory1;
         public Item[] _inventory2;
-
-
-    
-
 
         public Shop(int ShopSelected)
         {
@@ -122,7 +118,7 @@ namespace HelloWorld
             }
             public void Sell(ref Player player)
             {
-
+                 
             }
 
         

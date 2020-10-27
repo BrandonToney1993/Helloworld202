@@ -12,7 +12,8 @@ namespace HelloWorld
         
         public Weapon(string name, int cost, int it)
         {
-            
+            Item Sword = new Item("", 5, 0);
+            Item Potion = new Item("", 5, 0);
         }
 
     }

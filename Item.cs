@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 
 namespace HelloWorld
 {
@@ -16,7 +14,7 @@ namespace HelloWorld
         public Item(string name, int cost, int itemType)
         {
             Name = name;
-            cost = cost;
+            cost = Value;
             ItemType = ItemType;
         }
         public virtual int GetDamage()
@@ -25,7 +23,7 @@ namespace HelloWorld
         }
 
         public List<Item> Inventory = new List<Item>();
-        public int _gold;
+        public int Gold = 500;
         Item Sword = new Item("", 5, 0);
         Item Potion = new Item("", 5, 0);
 
@@ -33,8 +31,5 @@ namespace HelloWorld
         public Item[] _inventory2;
         public int itemSelected;
 
-
-       
     }
-    
 }
