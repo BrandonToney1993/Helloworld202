@@ -7,14 +7,17 @@ namespace HelloWorld
 {
     class Shop
     {
-        private List<Item> Inventory = new List<Item>();
-        private int _gold;
+
+        public List<Item> Inventory = new List<Item>();
+        public int _gold;
         Item Sword = new Item("", 5, 0);
         Item Potion = new Item("", 5, 0);
 
-        private Item[] _inventory1;
-        private Item[] _inventory2;
+        public Item[] _inventory1;
+        public Item[] _inventory2;
 
+
+    
 
 
         public Shop(int ShopSelected)
@@ -37,23 +40,11 @@ namespace HelloWorld
                     Inventory.Add(item);
                 }
             }
-
-
-
-            //public bool Sell(Player player, int itemIndex, int playerIndex)
-            //{
-            //    Item itemToBuy = _inventory[itemIndex];
-            //    if(Player.Buy(itemToBuy, playerIndex))
-            //    {
-            //        _gold += itemToBuy.cost;
-            //        return true;
-            //    }
-            //    return false;
-            //
         }
         public void RunShop(ref Player player)
         {
             Shop shop = new Shop(1);
+            shop.RunShop(ref player);
             string choice = "";
             //open shopping menu
             while (choice != "0")
@@ -65,26 +56,22 @@ namespace HelloWorld
                 Console.WriteLine("2:sell");
 
                 choice = Console.ReadLine();
-                if (choice == "1")
+                if (choice == "")
                 {
                     //checks if there is anything to buy
                     if (Inventory.Count <= 0)
                     {
-                        Console.Clear();
-
                         Console.WriteLine("there is nothing left to buy");
                     }
                     //enter buy menu
                     else
                     {
-                        Console.Clear();
                         Buy(ref player);
                     }
                 }
                 else if (choice == "2")
                 //enter sell menu
                 {
-                    Console.Clear();
                     Sell(ref player);
                 }
                 else if (choice == "0")

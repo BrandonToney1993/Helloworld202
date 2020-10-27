@@ -16,9 +16,25 @@ namespace HelloWorld
         public Item(string name, int cost, int itemType)
         {
             Name = name;
-            Value = cost;
-            ItemType = ItemType;   
+            cost = cost;
+            ItemType = ItemType;
+        }
+        public virtual int GetDamage()
+        {
+            return 0;
         }
 
+        public List<Item> Inventory = new List<Item>();
+        public int _gold;
+        Item Sword = new Item("", 5, 0);
+        Item Potion = new Item("", 5, 0);
+
+        public Item[] _inventory1;
+        public Item[] _inventory2;
+        public int itemSelected;
+
+
+       
     }
+    
 }

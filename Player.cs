@@ -13,7 +13,7 @@ namespace HelloWorld
             public int damage = 100;
             public float magic = 100.0f;
             public int level = 1;
-            public int Gold = 1;
+            public int Gold = 500;
 
             bool maxLevelReached = false;
             private int maxLevel = 100;
@@ -40,7 +40,7 @@ namespace HelloWorld
 
         public void EquipItem(Item Weapon)
         {
-
+            
         }
 
         public void AddItemToInventory(Item item)
