@@ -14,11 +14,7 @@ namespace HelloWorld
             public float magic = 100.0f;
             public int level = 1;
             public int Gold = 500;
-
-            bool maxLevelReached = false;
-            private int maxLevel = 100;
-
-        public List<Item> _inventory;
+            public List<Item> _inventory;
 
 
         public Player()
@@ -29,18 +25,20 @@ namespace HelloWorld
 
         public Player(string nameVal)
         {
-  
+          
         }
 
         public Player(string nameVal, int healthVal, int damageVal, int inventorySize)
         {
             playerHealth = healthVal;
             damage = damageVal;
+            inventorySize = 5;
         }
 
         public void EquipItem(Item Weapon)
         {
-            
+            Item Sword = new Item("", 5, 0);
+            Item Potion = new Item("", 5, 0);
         }
 
         public void AddItemToInventory(Item item)
@@ -48,9 +46,10 @@ namespace HelloWorld
             _inventory.Add(item);
         }
 
-        public void EquipItem(int itemIndex)
+        public void EquipItem()
         {
-            //damage = _inventory[itemIndex].statBoost;
+            Item Sword = new Item("", 5, 0);
+            Item Potion = new Item("", 5, 0);
         }
 
         public string GetName()
