@@ -7,7 +7,7 @@ namespace HelloWorld
 {
     class Game
     {
-        readonly Shop shop;
+        Shop shop;
         public bool _gameover = false;
         Player player1;
         public string role;
@@ -21,7 +21,7 @@ namespace HelloWorld
         public Item[] _inventory2;
         public int itemSelected;
 
-        internal Shop Shop => shop;
+        internal Shop Shop =>shop;
 
         public void Run()
         //run game. will ask for name and character class.
@@ -369,6 +369,10 @@ namespace HelloWorld
         {
 
         }
+    }
+
+    internal class shop
+    {
     }
 }
 

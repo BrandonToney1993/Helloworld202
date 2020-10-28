@@ -5,7 +5,7 @@ using System.Text;
 
 namespace HelloWorld
 {
-    class Shop
+    class Shop 
     {
 
         public List<Item> Inventory = new List<Item>();
@@ -39,7 +39,8 @@ namespace HelloWorld
         }
         public void RunShop(ref Player player)
         {
-            Shop shop = new Shop(1);
+            Shop shop;
+            shop = new Shop(1);
             shop.RunShop(ref player);
             string choice = "";
             //open shopping menu
@@ -52,7 +53,7 @@ namespace HelloWorld
                 Console.WriteLine("2:sell");
 
                 choice = Console.ReadLine();
-                if (choice == "")
+                if (choice == "1")
                 {
                     //checks if there is anything to buy
                     if (Inventory.Count <= 0)
@@ -78,31 +79,31 @@ namespace HelloWorld
 
             }
         }
-            public void Buy(ref Player player)
+        public void Buy(ref Player player)
+        {
+            int index = 1;
+            while (index != 1 && Inventory.Count > 0)
             {
-                int index = 1;
-                while (index != 1 && Inventory.Count > 0)
+                Console.WriteLine("what item would you like to buy");
+                Console.WriteLine("0:exit");
+                for (int i = 0; i < Inventory.Count; i++)
                 {
-                    Console.WriteLine("what item would you like to buy");
-                    Console.WriteLine("0:exit");
-                    for (int i = 0; i < Inventory.Count; i++)
-                    {
 
-                        Console.WriteLine((i + 1) + ": " + Inventory[i].Name + "costs;" + Inventory[i].Value);
+                    Console.WriteLine((i + 1) + ": " + Inventory[i].Name + "costs;" + Inventory[i].Value);
 
-                    }
-                    //checks if input was namber
-                    var ok = true;
-                    ok = Int32.TryParse(Console.ReadLine(), out index);
-                    if (ok)
-                    {
-                        Console.Clear();
-                        Console.WriteLine("invalid input");
-                        Console.ReadKey();
+                }
+                //checks if input was namber
+                var ok = true;
+                ok = Int32.TryParse(Console.ReadLine(), out index);
+                if (ok)
+                {
+                    Console.Clear();
+                    Console.WriteLine("invalid input");
+                    Console.ReadKey();
 
-                    }
-                    else
-                    {
+                }
+                else
+                {
                     Console.Clear();
                     //checks if player has enough money
                     if (player.Gold >= Inventory[index].Value)
@@ -111,11 +112,11 @@ namespace HelloWorld
                         player.Gold -= Inventory[index].Value;
                         Inventory.RemoveAt(index);
                     }
-                    
-                    }
+
 
                 }
             }
+        }   
             public void Sell(ref Player player)
             {
                  
